@@ -1,0 +1,3 @@
+CREATE DATABASE IF NOT EXISTS student_grading_system;
+
+USE student_grading_system;
