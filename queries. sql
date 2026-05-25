@@ -1,0 +1,23 @@
+INSERT INTO Students(student_name, department, year_of_study, email)
+VALUES
+('Arun Kumar', 'Computer Science', 2, 'arun@gmail.com'),
+('Priya', 'Mathematics', 1, 'priya@gmail.com');
+
+INSERT INTO Subjects(subject_name, semester)
+VALUES
+('Database Management System', 3),
+('Python Programming', 2);
+
+INSERT INTO Marks(student_id, subject_id, marks)
+VALUES
+(1, 1, 85),
+(1, 2, 90),
+(2, 1, 75);
+
+SELECT 
+    Students.student_name,
+    Subjects.subject_name,
+    Marks.marks
+FROM Marks
+JOIN Students ON Students.student_id = Marks.student_id
+JOIN Subjects ON Subjects.subject_id = Marks.subject_id;
